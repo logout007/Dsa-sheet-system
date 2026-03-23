@@ -1,0 +1,31 @@
+{
+  "globalEnv": [
+    "NODE_ENV",
+    "PORT",
+    "MONGODB_URI",
+    "JWT_SECRET",
+    "JWT_EXPIRES_IN",
+    "CLIENT_ORIGIN",
+    "VITE_API_BASE_URL"
+  ],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "build/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
+    },
+    "seed": {
+      "cache": false
+    },
+    "lint": {
+      "outputs": []
+    }
+  }
+}

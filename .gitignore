@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+apps/*/node_modules/
+
+# Build outputs
+apps/frontend/dist/
+apps/backend/logs/
+
+# Environment files
+.env
+.env.local
+.env.production
+apps/**/.env
+apps/**/.env.local
+apps/**/.env.production
+
+# Turborepo cache
+.turbo/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# PM2
+ecosystem.config.js.bak
+
+# Root-level docs
+/*.md
+/*.pem
+/*.docx
+/.kiro
+/.vscode
