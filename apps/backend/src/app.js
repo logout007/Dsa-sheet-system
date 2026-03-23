@@ -43,6 +43,8 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
+app.get('/health', (req, res) => res.json({ status: 'ok', timestamp: new Date() }));
+
 app.use('/api/v1/auth', require('./routes/auth'));
 app.use('/api/v1/topics', require('./routes/topics'));
 app.use('/api/v1/problems', require('./routes/problems'));
